@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumanou Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <div class="contact-container">
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVxbxZTqKWXQkRqXLzdvPMbDdcSwDFJMkgbcknKDJfhxslKdLgTvVzXkdDQFlnwXGRtMXw" target="_blank" id="contact-me-btn">Contact Me</a>
+    </div>
+
+    <div class="container">
+      
+        <div class="calendar-section">
+            <div class="calendar-header">
+                <button id="prev-month">&lt;</button>
+                <span id="calendar-month-year"></span>
+                <button id="next-month">&gt;</button>
+            </div>
+            <div id="calendar"></div>
+            <hr class="calendar-divider">
+
+            <button id="work-category" class="category-button">
+                <div class="category-square"></div>
+                <span class="category-text">Work</span>
+            </button>
+            <button id="important-category" class="category-button red">
+                <div class="category-square red"></div>
+                <span>Important</span>
+            </button>
+            <button id="school-category" class="category-button green">
+                <div class="category-square green"></div>
+                <span>School</span>
+            </button>
+
+         
+            <hr class="category-divider">
+
+           
+            <button id="personal-category" class="category-button purple">
+                <div class="category-square purple"></div>
+                <span>Personal</span>
+            </button>
+
+           
+            <button id="birthdays-category" class="category-button gold">
+                <div class="category-square gold"></div>
+                <span>Birthdays</span>
+            </button>
+
+          
+            <hr class="category-divider">
+
+           
+            <div id="name-section">
+                <input type="text" id="name-input" placeholder="Enter your name">
+                <p id="greeting-message"></p>
+                <hr class="category-divider">
+            </div>
+        </div>
+
+
+        <div class="task-section">
+            <h2 id="selected-date">Select a date</h2>
+            <div id="task-input-container">
+                <input type="text" id="task-input" placeholder="Add a new task and time :">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            <div id="tasks-list">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

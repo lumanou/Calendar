@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+/* Global styles */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+}
+
+button {
+    font-family: 'Inter', sans-serif; 
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#work-category {
+    font-family: 'Inter', sans-serif;
+}
+
+#school-category {
+    font-family: 'Inter', sans-serif;
+}
+
+#personal-category {
+    font-family: 'Inter', sans-serif;
+}
+
+#birthdays-category {
+    font-family: 'Inter', sans-serif;
+}
+
+.month-year {
+    font-family: 'Inter', serif; 
+    font-size: 24px;
+    font-weight: 700; 
+    color: #333;
+}
+
+
+button.selected {
+    font-weight: 700; 
+}
+
+/* Container layout */
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0; 
+    padding: 0; 
+}
+
+
+.calendar-section {
+    width: 35%; 
+    background-color: #f1f1f1;
+    border-right: 1px solid #ddd;
+    padding: 10px; 
+    box-sizing: border-box;
+    margin-right: 10px; 
+}
+
+#calendar {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Task section */
+.task-section {
+    width: 190%; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#task-input-container {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 20px;
+    gap: 10px; 
+    border-radius: 20px;
+}
+
+#task-input {
+    width: 55%; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+#add-task-btn {
+    width: auto; 
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 25px; 
+}
+
+#add-task-btn:hover {
+    background-color: #004d40;
+}
+
+
+#tasks-list {
+    margin-bottom: 20px;
+}
+
+
+#selected-date {
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+
+#selected-date strong {
+    font-weight: bold; 
+}
+
+#tasks-list {
+    margin-bottom: 20px;
+}
+
+.task-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e0f7fa;
+    border-left: 5px solid #00acc1;
+    border-radius: 4px;
+    display: flex;               
+    justify-content: space-between; 
+    align-items: center;         
+}
+
+.task-item button {
+    margin-left: 10px;            
+    background-color: #ff6666;   
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.task-item button:hover {
+    background-color: #cc0000;   
+}
+
+
+#task-input-container {
+    display: flex;
+}
+
+#task-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#add-task-btn {
+    width: 20%;
+    background-color: #2F3C7E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#add-task-btn:hover {
+    background-color: #004d40;
+}
+
+.calendar-container {
+    max-width: 400px; 
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    border-radius: 20px; 
+    padding: 20px;
+    background-color: rgb(94, 7, 7);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px; 
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.calendar-day {
+    padding: 15px; 
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.calendar-day.selected {
+    background-color: #ffcccb;
+    border: 2px solid #66b2ff;
+}
+
+.calendar-day:hover {
+    background-color: #ff6666; 
+    color: white; 
+}
+
+
+.calendar-day.selected {
+    background-color: #ff6666; 
+    color: rgb(218, 1, 1); 
+    border: 2px solid #66b2ff; 
+}
+
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#prev-month, #next-month {
+    background-color: #2F3C7E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#prev-month:hover, #next-month:hover {
+    background-color: #004d40;
+}
+
+
+.calendar-divider {
+    border: 0;
+    height: 1px;
+    background: #ddd; 
+    margin: 20px 0; 
+    width: 100%; 
+}
+
+
+.category-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none; 
+    cursor: pointer;
+    background-color: transparent; 
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.category-square {
+    width: 24px;
+    height: 24px;
+    background-color: #00acc1;
+    border-radius: 50%; 
+    border: 2px solid #fff; 
+    margin-right: 10px; 
+}
+
+.category-text {
+    font-size: 18px;
+    color: #333;
+}
+
+
+.category-button:hover,
+.category-button.active {
+    background-color: #007888; 
+    color: #ffe6e1; 
+    border-color: #eb3700b0; 
+}
+
+.category-button .category-square {
+    width: 20px; 
+    height: 20px;
+    background-color: #00acc1;
+    margin-right: 10px; 
+    border-radius: 5px;
+}
+
+.category-button span {
+    font-size: 18px;
+    color: #333;
+}
+
+
+.category-button.red {
+    border: 1px solid transparent; 
+    background-color: transparent;
+    margin-top: 15px;
+}
+
+.category-button.red:hover,
+.category-button.red.active {
+    background-color: #ff6666;
+    color: white;
+    
+}
+
+
+.category-button.red .category-square {
+    background-color: #ff6666;
+}
+
+
+.task-item.important {
+    background-color: #ffe6e1;
+    border-left: 5px solid #ff4500;
+    color: #cc3300;
+}
+
+
+.category-button.green {
+    border: 1px solid transparent;
+    background-color: transparent;
+    margin-top: 15px;
+}
+
+.category-button.green:hover,
+.category-button.green.active {
+    background-color: #66cc66;
+    color: white;
+    border-color: #339933;
+}
+
+.category-button.green .category-square {
+    background-color: #66cc66;
+}
+
+
+.task-item.school {
+    background-color: #e6ffe6;
+    border-left: 5px solid #339933;
+}
+
+
+.category-divider {
+    border: 0;
+    height: 1px; 
+    background: #ddd;
+    margin: 20px 0; 
+    width: 100%; 
+}
+
+
+.category-button.purple {
+    border: 1px solid transparent;
+    background-color: transparent;
+    margin-top: 15px;
+}
+
+.category-button.purple:hover,
+.category-button.purple.active {
+    background-color: #8a2be2; 
+    color: white;
+    border-color: #6a0dad; 
+}
+
+.category-button.purple .category-square {
+    background-color: #8a2be2; 
+}
+
+#add-task-btn {
+    width: 20%; 
+    background-color: #2F3C7E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    
+}
+
+
+.category-button.gold {
+    border: 1px solid transparent;
+    background-color: transparent;
+    margin-top: 15px;
+}
+
+.category-button.gold:hover,
+.category-button.gold.active {
+    background-color: #F9E795; 
+    color: white;
+    border-color: #F9E795;
+}
+
+.category-button.gold .category-square {
+    background-color: #f4c542; 
+}
+
+
+
+#name-input-container {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#name-input {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em; 
+    padding: 7px;
+    border-radius: 20px; 
+    border: 2px solid #ccc; 
+    width: 45%; 
+    max-width: 300px; 
+    margin-bottom: 10px; 
+    margin-left: 85px;
+    margin-top: 0;
+    text-align: center;
+}
+
+#greeting-message {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px; 
+    text-align: center;
+    margin-top: 8px;
+}
+
+.contact-container {
+    position: fixed;
+    top: 880px;
+    left: 120px; 
+    z-index: 1000; 
+}
+
+#contact-me-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2F3C7E; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    border: none;
+}
+
+#contact-me-btn:hover {
+    background-color: #004d40; 
+}
